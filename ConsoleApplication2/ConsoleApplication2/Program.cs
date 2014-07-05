@@ -21,8 +21,17 @@ namespace ConsoleApplication2
             
             var x = library101.FindBook(1);
             Console.WriteLine("The first book is " + x.Name + " and it is a " + x.Description);
-            Book book2 = Book.FindtheItemID(myc);
-            Console.WriteLine(book2);
+
+            List<Item> myItems = Item.GetItems(10);
+            foreach (Item items in myItems)
+            {
+                Console.WriteLine("The item is {0} and its ID is {1}", items.Name, items.Itemid);
+
+            }
+	{
+		 
+	}
+            
             //Console.WriteLine("The first book is: {0} by {1}, published on {2}", book1.Title, book1.Author, book1.PublishDate);
                 Console.ReadLine();
         }

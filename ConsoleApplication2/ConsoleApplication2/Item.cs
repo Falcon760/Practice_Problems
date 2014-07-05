@@ -28,9 +28,17 @@ namespace ConsoleApplication2
             {
                 Console.WriteLine("This is a {0}", Description);
             }
-            public static Item FindtheItemID(int v)
+            public static List<Item> GetItems(int Num)
             {
-                return v;
+                var random = new Random();
+                var newList = new List<Item>();
+                Item newItem;
+                for (int i = 0; i < Num; i++)
+                {
+                    newItem = new Item() { Itemid = random.Next(), Name = "MyItem" + i.ToString() };
+                    newList.Add(newItem);
+                }
+                return newList;
             }
     }
 
